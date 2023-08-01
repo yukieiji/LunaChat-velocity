@@ -18,7 +18,6 @@ import com.github.ucchyocean.lc.velocity.event.*;
 
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public class VelocityEventSender implements EventSenderInterface {
     /**
