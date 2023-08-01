@@ -98,13 +98,13 @@ public class LunaChatVelocity implements PluginInterface {
 
         // コマンド登録
         proxy.getCommandManager().register(
-                new LunaChatCommandVelocity(), "lunachat", "lc", "ch");
+                "lunachat", new LunaChatCommandVelocity(), "lc", "ch");
         proxy.getCommandManager().register(
-                new MessageCommandVelocity(), "tell", "message", "m", "t", "w");
+                "tell",  new MessageCommandVelocity(), "message", "m", "t", "w");
         proxy.getCommandManager().register(
-                new ReplyCommandVelocity(), "reply", "r");
+                "reply", new ReplyCommandVelocity(), "r");
         proxy.getCommandManager().register(
-                new JapanizeCommandVelocity(), "japanize", "jp");
+                "japanize", new JapanizeCommandVelocity(), "jp");
 
         // リスナー登録
         proxy.getEventManager().register(this, new VelocityEventListener(this));
