@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
         name = "LunaChat-velocity",
         version = "1.3.0-SNAPSHOT",
         description = "LunaChat for Velocity",
-        authors = {"ucchy, YukiLeafX, LazyGon, tomo1560 (LunaChat)", "Emorard"}
+        authors = {"ucchy, YukiLeafX, LazyGon, tomo1560 (LunaChat)", "Emorard", "yukieiji"}
 )
 public class LunaChatVelocity implements PluginInterface {
     public static ProxyServer PROXY;
