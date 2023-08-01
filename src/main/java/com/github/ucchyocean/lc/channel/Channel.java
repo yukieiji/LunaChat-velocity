@@ -15,9 +15,7 @@ import com.github.ucchyocean.lc.util.ClickableFormat;
 import com.github.ucchyocean.lc.util.Utility;
 import com.github.ucchyocean.lc.util.YamlConfig;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.TextComponent;
 import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -411,7 +409,7 @@ public abstract class Channel {
      * @param name 発言者の表示名
      */
     public void sendSystemMessage(String message, boolean sendDynmap, String name) {
-        sendSystemMessage(TextComponent.builder(message).build(), sendDynmap, name);
+        sendSystemMessage(Component.text().content(message).build(), sendDynmap, name);
     }
 
     /**
