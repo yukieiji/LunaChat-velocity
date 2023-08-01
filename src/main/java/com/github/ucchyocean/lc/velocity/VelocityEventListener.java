@@ -29,12 +29,9 @@ import com.velocitypowered.api.event.player.PlayerChatEvent;
 import com.velocitypowered.api.proxy.Player;
 import com.velocitypowered.api.proxy.server.RegisteredServer;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.TextComponent;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -195,7 +192,7 @@ public class VelocityEventListener {
                     if ( !channel.getMembers().contains(member) ) {
                         // 指定されたチャンネルに参加していないなら、エラーを表示して何も発言せずに終了する。
                         member.sendMessage(
-                                TextComponent.builder(Messages.errmsgNomember()).build());
+                            Component.text().content(Messages.errmsgNomember()).build());
                         return;
                     }
 
@@ -452,7 +449,7 @@ public class VelocityEventListener {
 
         int count = 0;
         ArrayList<Component> items = new ArrayList<>();
-        items.add(TextComponent.builder(Messages.motdFirstLine()).build());
+        items.add(Component.text().content(Messages.motdFirstLine()).build());
         for ( Channel channel : channels ) {
 
             // BANされているチャンネルは表示しない
@@ -485,7 +482,7 @@ public class VelocityEventListener {
                 break;
             }
         }
-        items.add(TextComponent.builder(Messages.listEndLine()).build());
+        items.add(Component.text().content(Messages.listEndLine()).build());
 
         return items;
     }
