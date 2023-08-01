@@ -7,7 +7,6 @@ package com.github.ucchyocean.lc.util;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -15,7 +14,6 @@ import java.util.regex.Pattern;
 
 import com.github.ucchyocean.lc.LunaChatVelocity;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.ComponentBuilder;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
@@ -26,7 +24,6 @@ import com.github.ucchyocean.lc.LunaChatAPI;
 import com.github.ucchyocean.lc.Messages;
 import com.github.ucchyocean.lc.channel.Channel;
 import com.github.ucchyocean.lc.member.ChannelMember;
-import org.slf4j.Logger;
 
 
 /**
@@ -196,7 +193,7 @@ public class ClickableFormat {
 
             // マッチする箇所までの文字列を取得する
             if ( lastIndex < matcher.start() ) {
-                components.add(TextComponent.of(message.substring(lastIndex, matcher.start())));
+                components.add(Component.text(message.substring(lastIndex, matcher.start())));
             }
 
             // マッチした箇所の文字列を解析して追加する
@@ -204,9 +201,9 @@ public class ClickableFormat {
             String text = matcher.group(2);
             String hover = matcher.group(3);
             String command = matcher.group(4);
-            TextComponent tc = TextComponent.of(text);
+            TextComponent tc = Component.text(text);
             if ( !hover.isEmpty() ) {
-                tc.hoverEvent(HoverEvent.showText(TextComponent.of(hover)));
+                tc.hoverEvent(HoverEvent.showText(Component.text(hover)));
             }
             if ( type.equals("RUN_COMMAND") ) {
                 tc.clickEvent(ClickEvent.runCommand(command));
@@ -229,9 +226,9 @@ public class ClickableFormat {
 
         if ( lastIndex < message.length() - 1 ) {
             // 残りの部分の文字列を取得する
-            components.add(TextComponent.of(message.substring(lastIndex)));
+            components.add(Component.text(message.substring(lastIndex)));
         }
-        return TextComponent.builder().build().children(components);
+        return Component.text().build().children(components);
     }
 
     public String toLegacyText() {
