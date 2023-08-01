@@ -14,7 +14,6 @@ import com.github.ucchyocean.lc.channel.Channel;
 import com.github.ucchyocean.lc.member.ChannelMember;
 import com.github.ucchyocean.lc.util.ChatColor;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.TextComponent;
 
 /**
  * listコマンドの実行クラス
@@ -110,14 +109,14 @@ public class ListCommand extends LunaChatSubCommand {
 
         ArrayList<Component> items = new ArrayList<>();
         if ( page == 0 ) { // 全表示
-            items.add(TextComponent.builder(Messages.listFirstLine()).build());
+            items.add(Component.text().content(Messages.listFirstLine()).build());
             items.addAll(list);
-            items.add(TextComponent.builder(Messages.listEndLine()).build());
+            items.add(Component.text().content(Messages.listEndLine()).build());
         } else { // ページ表示
-            items.add(TextComponent.builder(Messages.listFirstLinePaging(page, maxPage)).build());
+            items.add(Component.text().content(Messages.listFirstLinePaging(page, maxPage)).build());
             int endIndex = (page * PAGE_SIZE > size) ? size : page * PAGE_SIZE;
             items.addAll(list.subList((page - 1) * PAGE_SIZE, endIndex));
-            items.add(TextComponent.builder(Messages.listEndLine()).build());
+            items.add(Component.text().content(Messages.listEndLine()).build());
         }
 
         return items;
