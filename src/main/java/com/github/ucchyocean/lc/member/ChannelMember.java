@@ -5,7 +5,7 @@
  */
 package com.github.ucchyocean.lc.member;
 
-import net.kyori.text.Component;
+import net.kyori.adventure.text.Component;
 
 /**
  * チャンネルメンバーの抽象クラス
