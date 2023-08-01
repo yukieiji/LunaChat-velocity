@@ -13,8 +13,8 @@ import com.github.ucchyocean.lc.Messages;
 import com.github.ucchyocean.lc.channel.Channel;
 import com.github.ucchyocean.lc.member.ChannelMember;
 import com.github.ucchyocean.lc.util.ChatColor;
-import net.kyori.text.Component;
-import net.kyori.text.TextComponent;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 
 /**
  * listコマンドの実行クラス

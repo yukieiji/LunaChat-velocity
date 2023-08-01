@@ -1,6 +1,6 @@
 package com.github.ucchyocean.lc.member;
 
-import net.kyori.text.Component;
+import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

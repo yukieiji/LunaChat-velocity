@@ -14,8 +14,8 @@ import com.github.ucchyocean.lc.util.ChatColor;
 import com.github.ucchyocean.lc.util.ClickableFormat;
 import com.github.ucchyocean.lc.util.Utility;
 import com.github.ucchyocean.lc.util.YamlConfig;
-import net.kyori.text.Component;
-import net.kyori.text.TextComponent;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 

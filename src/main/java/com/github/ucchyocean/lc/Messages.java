@@ -15,9 +15,9 @@ import com.github.ucchyocean.lc.util.ClickableFormat;
 import com.github.ucchyocean.lc.util.KeywordReplacer;
 import com.github.ucchyocean.lc.util.Utility;
 import com.github.ucchyocean.lc.util.YamlConfig;
-import net.kyori.text.Component;
-import net.kyori.text.ComponentBuilders;
-import net.kyori.text.TextComponent;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.ComponentBuilder;
+import net.kyori.adventure.text.TextComponent;
 
 import javax.swing.text.html.Option;
 

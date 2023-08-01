@@ -18,7 +18,7 @@ import com.github.ucchyocean.lc.event.EventResult;
 import com.github.ucchyocean.lc.member.ChannelMember;
 import com.github.ucchyocean.lc.util.ClickableFormat;
 import com.velocitypowered.api.proxy.Player;
-import net.kyori.text.Component;
+import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;

@@ -14,12 +14,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.github.ucchyocean.lc.LunaChatVelocity;
-import net.kyori.text.Component;
-import net.kyori.text.ComponentBuilder;
-import net.kyori.text.ComponentBuilders;
-import net.kyori.text.TextComponent;
-import net.kyori.text.event.ClickEvent;
-import net.kyori.text.event.HoverEvent;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.ComponentBuilder;
+import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.event.ClickEvent;
+import net.kyori.adventure.text.event.HoverEvent;
 import org.jetbrains.annotations.Nullable;
 
 import com.github.ucchyocean.lc.LunaChat;

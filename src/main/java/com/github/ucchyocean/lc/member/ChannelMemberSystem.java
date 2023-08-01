@@ -1,6 +1,6 @@
 package com.github.ucchyocean.lc.member;
 
-import net.kyori.text.Component;
+import net.kyori.adventure.text.Component;
 
 public class ChannelMemberSystem extends ChannelMember {
 
