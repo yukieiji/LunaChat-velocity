@@ -14,7 +14,6 @@ import java.util.List;
 
 import com.github.ucchyocean.lc.LunaChat;
 import com.github.ucchyocean.lc.LunaChatAPI;
-import com.github.ucchyocean.lc.LunaChatMode;
 import com.github.ucchyocean.lc.Messages;
 import com.github.ucchyocean.lc.event.EventResult;
 import com.github.ucchyocean.lc.japanize.JapanizeType;

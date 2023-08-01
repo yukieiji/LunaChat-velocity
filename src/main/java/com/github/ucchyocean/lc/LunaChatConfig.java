@@ -13,7 +13,6 @@ import java.util.regex.Pattern;
 
 import com.github.ucchyocean.lc.util.EventPriority;
 import com.github.ucchyocean.lc.japanize.JapanizeType;
-import com.github.ucchyocean.lc.util.EventPriority;
 import com.github.ucchyocean.lc.util.Utility;
 import com.github.ucchyocean.lc.util.YamlConfig;
 
