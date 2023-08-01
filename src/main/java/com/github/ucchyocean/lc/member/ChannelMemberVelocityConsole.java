@@ -114,7 +114,7 @@ public class ChannelMemberVelocityConsole extends ChannelMemberVelocity {
     @Override
     public void sendMessage(String message) {
         if ( message == null || message.isEmpty() ) return;
-        source.sendMessage(TextComponent.of(message));
+        source.sendMessage(Component.text(message));
     }
 
     /**
@@ -156,7 +156,7 @@ public class ChannelMemberVelocityConsole extends ChannelMemberVelocity {
      * @see com.github.ucchyocean.lc.member.ChannelMember#chat(String)
      */
     public void chat(String message) {
-        LunaChatVelocity.PROXY.broadcast(TextComponent.of("<" + getName() + ">" + message));
+        LunaChatVelocity.PROXY.sendMessage(Component.text("<" + getName() + ">" + message));
     }
 
     /**
