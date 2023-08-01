@@ -7,14 +7,15 @@ package com.github.ucchyocean.lc.velocity;
 
 import com.github.ucchyocean.lc.command.LunaChatCommand;
 import com.github.ucchyocean.lc.member.ChannelMember;
-import com.velocitypowered.api.command.Command;
 import com.velocitypowered.api.command.CommandSource;
+import com.velocitypowered.api.command.SimpleCommand;
+
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class LunaChatCommandVelocity implements Command {
+public class LunaChatCommandVelocity implements SimpleCommand {
 
     private LunaChatCommand command;
 
@@ -29,7 +30,12 @@ public class LunaChatCommandVelocity implements Command {
      * @param args   the arguments for this command
      */
     @Override
-    public void execute(CommandSource source, @NotNull @NonNull String[] args) {
+    public void execute(final Invocation invocation) {
+
+        CommandSource source = invocation.source();
+        // Get the arguments after the command alias
+        String[] args = invocation.arguments();
+
         command.execute(ChannelMember.getChannelMember(source), "ch", args);
     }
 
@@ -41,7 +47,12 @@ public class LunaChatCommandVelocity implements Command {
      * @return tab complete suggestions
      */
     @Override
-    public List<String> suggest(CommandSource source, @NotNull @NonNull String[] currentArgs) {
+    public List<String> suggest(final Invocation invocation) {
+
+        CommandSource source = invocation.source();
+        // Get the arguments after the command alias
+        String[] currentArgs = invocation.arguments();
+
         return command.onTabComplete(ChannelMember.getChannelMember(source), "ch", currentArgs);
     }
 }

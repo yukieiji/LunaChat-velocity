@@ -7,12 +7,10 @@ package com.github.ucchyocean.lc.velocity;
 
 import com.github.ucchyocean.lc.command.LunaChatReplyCommand;
 import com.github.ucchyocean.lc.member.ChannelMember;
-import com.velocitypowered.api.command.Command;
 import com.velocitypowered.api.command.CommandSource;
-import org.checkerframework.checker.nullness.qual.NonNull;
-import org.jetbrains.annotations.NotNull;
+import com.velocitypowered.api.command.SimpleCommand;
 
-public class ReplyCommandVelocity implements Command {
+public class ReplyCommandVelocity implements SimpleCommand {
 
     private LunaChatReplyCommand command;
 
@@ -27,7 +25,12 @@ public class ReplyCommandVelocity implements Command {
      * @param args   the arguments for this command
      */
     @Override
-    public void execute(CommandSource source, @NotNull @NonNull String[] args) {
+    public void execute(final Invocation invocation) {
+
+        CommandSource source = invocation.source();
+        // Get the arguments after the command alias
+        String[] args = invocation.arguments();
+
         command.execute(ChannelMember.getChannelMember(source), "r", args);
     }
 }
