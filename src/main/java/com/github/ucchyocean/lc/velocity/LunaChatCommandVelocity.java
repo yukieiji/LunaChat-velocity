@@ -10,9 +10,6 @@ import com.github.ucchyocean.lc.member.ChannelMember;
 import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.command.SimpleCommand;
 
-import org.checkerframework.checker.nullness.qual.NonNull;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
 
 public class LunaChatCommandVelocity implements SimpleCommand {
