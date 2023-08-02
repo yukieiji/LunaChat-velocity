@@ -215,6 +215,6 @@ public class ChannelMemberPlayer extends ChannelMemberVelocity {
     @Override
     public Optional<ServerConnection> getServer() {
         Optional<Player> player = getPlayer();
-        return player.map(Player::getCurrentServer).orElse(null);
+        return player.map(Player::getCurrentServer).orElse(Optional.empty());
     }
 }
